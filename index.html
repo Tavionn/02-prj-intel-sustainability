@@ -196,38 +196,15 @@
 
   <script>
     const lockSwitch = document.querySelector("#lock-details");
+    const timeline = document.querySelector(".timeline");
     const timelineCards = document.querySelectorAll(".timeline-card");
-    let lastTouchTime = 0;
 
-    timelineCards.forEach((card) => {
-      const revealOnTouch = () => {
-        if (Date.now() - lastTouchTime < 500) {
-          return;
-        }
+    timeline.addEventListener("click", (event) => {
+      const card = event.target.closest(".timeline-card");
 
-        lastTouchTime = Date.now();
+      if (card) {
         card.classList.toggle("is-locked");
-      };
-
-      card.addEventListener("click", () => {
-        if (Date.now() - lastTouchTime < 500) {
-          return;
-        }
-
-        if (!lockSwitch.checked) {
-          return;
-        }
-
-        card.classList.toggle("is-locked");
-      });
-
-      card.addEventListener("pointerup", (event) => {
-        if (event.pointerType === "touch") {
-          revealOnTouch();
-        }
-      });
-
-      card.addEventListener("touchend", revealOnTouch, { passive: true });
+      }
     });
 
     lockSwitch.addEventListener("change", () => {

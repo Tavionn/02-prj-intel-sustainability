@@ -354,8 +354,6 @@ header p {
 	transition: opacity 220ms ease, transform 220ms ease, visibility 220ms ease;
 }
 
-.timeline-card:hover p,
-.timeline-card:focus-within p,
 .timeline-card.is-locked p {
 	opacity: 1 !important;
 	visibility: visible !important;
@@ -633,23 +631,12 @@ header p {
 	}
 }
 
-@media (hover: none) {
-	.timeline-card:not(.is-locked):hover p,
-	.timeline-card:not(.is-locked):focus-within p {
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(100%);
-	}
-
-	.timeline-card:not(.is-locked):hover,
-	.timeline-card:not(.is-locked):focus-within {
-		transform: none;
-		box-shadow: 8px 8px 0 var(--cyan);
-	}
-
-	.timeline-card:nth-child(3n):not(.is-locked):hover,
-	.timeline-card:nth-child(3n):not(.is-locked):focus-within {
-		box-shadow: 8px 8px 0 var(--intel-blue);
+@media (hover: hover) {
+	.timeline-card:hover p,
+	.timeline-card:focus-within p {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
 	}
 }
 
