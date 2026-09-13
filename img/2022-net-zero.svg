@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" role="img">
-  <rect width="500" height="200" fill="#001e3c"/>
-  <circle cx="126" cy="100" r="68" fill="none" stroke="#00c7fd" stroke-width="7"/>
-  <path d="M126 32v136M58 100h136" stroke="#79dff8" stroke-width="2"/>
-  <path d="M78 65c28 18 68 18 96 0M78 135c28-18 68-18 96 0" fill="none" stroke="#79dff8" stroke-width="2"/>
-  <path d="M250 110h83l20-30 27 52 17-24h53" fill="none" stroke="#c4d600" stroke-width="7" stroke-linejoin="round"/>
-  <text x="250" y="57" fill="#ffffff" font-family="Arial,sans-serif" font-size="28" font-weight="700">NET-ZERO</text>
-  <text x="250" y="166" fill="#79dff8" font-family="Arial,sans-serif" font-size="15">2040 TARGET</text>
-</svg>
