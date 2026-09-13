@@ -149,14 +149,50 @@
       </p>
     </article>
   </section>
+
   <div class="timeline-footer">
-    <p id="goals" class="timeline-hint">Scroll to view the journey | Hover over a card to learn more</p>
+    <p class="timeline-hint">Scroll to view the journey | Hover over a card to learn more</p>
     <label class="lock-switch">
       <input id="lock-details" type="checkbox" />
       <span class="switch-track" aria-hidden="true"></span>
       <span>Lock details</span>
     </label>
   </div>
+
+  <section id="goals" class="goals-section" aria-labelledby="goals-title">
+    <div class="goals-content">
+      <p class="section-kicker">Looking ahead</p>
+      <h2 id="goals-title">Intel's 2030 Goals</h2>
+      <p class="goals-intro">
+        Intel's RISE strategy sets measurable targets for making technology
+        more sustainable, inclusive, and responsible by 2030.
+      </p>
+
+      <div class="goals-list">
+        <article class="goal-item">
+          <h3>Climate action</h3>
+          <p>
+            Reach net-zero greenhouse gas emissions from operations and
+            increase renewable electricity across Intel's global sites.
+          </p>
+        </article>
+        <article class="goal-item">
+          <h3>Water stewardship</h3>
+          <p>
+            Conserve and restore water so Intel can return more water to the
+            communities where it operates than it consumes.
+          </p>
+        </article>
+        <article class="goal-item">
+          <h3>Waste reduction</h3>
+          <p>
+            Reduce waste from manufacturing and increase reuse and recycling
+            throughout Intel's operations and supply chain.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <script>
     const lockSwitch = document.querySelector("#lock-details");
