@@ -25,7 +25,9 @@
       <p class="hero-kicker">A timeline of responsible innovation</p>
       <!-- Main Heading -->
       <h1>
-        Sustainability Through the Ages
+        Sustainability<br />
+        Through the<br />
+        Ages
       </h1>
 
       <!-- Subheading / Description -->
@@ -39,7 +41,6 @@
 
   <!-- Timeline Cards Section -->
   <section id="timeline" class="timeline" aria-label="Intel sustainability timeline">
-
     <!-- Card 1: 1968 -->
     <article class="timeline-card">
       <h2>1968</h2>
@@ -148,6 +149,34 @@
       </p>
     </article>
   </section>
-  <p id="goals" class="timeline-hint">Scroll to view the journey | Hover over a card to learn more</p>
+  <div class="timeline-footer">
+    <p id="goals" class="timeline-hint">Scroll to view the journey | Hover over a card to learn more</p>
+    <label class="lock-switch">
+      <input id="lock-details" type="checkbox" />
+      <span class="switch-track" aria-hidden="true"></span>
+      <span>Lock details</span>
+    </label>
+  </div>
+
+  <script>
+    const lockSwitch = document.querySelector("#lock-details");
+    const timelineCards = document.querySelectorAll(".timeline-card");
+
+    timelineCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        if (!lockSwitch.checked) {
+          return;
+        }
+
+        card.classList.toggle("is-locked");
+      });
+    });
+
+    lockSwitch.addEventListener("change", () => {
+      if (!lockSwitch.checked) {
+        timelineCards.forEach((card) => card.classList.remove("is-locked"));
+      }
+    });
+  </script>
 </body>
 </html>
