@@ -151,7 +151,7 @@
   </section>
 
   <div class="timeline-footer">
-    <p class="timeline-hint">Scroll to view the journey | Hover over a card to learn more</p>
+    <p class="timeline-hint">Scroll to view the journey | Hover or tap a card to learn more</p>
     <label class="lock-switch">
       <input id="lock-details" type="checkbox" />
       <span class="switch-track" aria-hidden="true"></span>
@@ -197,10 +197,11 @@
   <script>
     const lockSwitch = document.querySelector("#lock-details");
     const timelineCards = document.querySelectorAll(".timeline-card");
+    const touchDevice = window.matchMedia("(hover: none)").matches;
 
     timelineCards.forEach((card) => {
       card.addEventListener("click", () => {
-        if (!lockSwitch.checked) {
+        if (!touchDevice && !lockSwitch.checked) {
           return;
         }
 
