@@ -634,21 +634,21 @@ header p {
 }
 
 @media (hover: none) {
-	.timeline-card:hover p,
-	.timeline-card:focus-within p {
+	.timeline-card:not(.is-locked):hover p,
+	.timeline-card:not(.is-locked):focus-within p {
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(100%);
 	}
 
-	.timeline-card:hover,
-	.timeline-card:focus-within {
+	.timeline-card:not(.is-locked):hover,
+	.timeline-card:not(.is-locked):focus-within {
 		transform: none;
 		box-shadow: 8px 8px 0 var(--cyan);
 	}
 
-	.timeline-card:nth-child(3n):hover,
-	.timeline-card:nth-child(3n):focus-within {
+	.timeline-card:nth-child(3n):not(.is-locked):hover,
+	.timeline-card:nth-child(3n):not(.is-locked):focus-within {
 		box-shadow: 8px 8px 0 var(--intel-blue);
 	}
 }

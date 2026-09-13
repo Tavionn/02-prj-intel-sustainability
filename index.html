@@ -197,7 +197,7 @@
   <script>
     const lockSwitch = document.querySelector("#lock-details");
     const timelineCards = document.querySelectorAll(".timeline-card");
-    const touchDevice = window.matchMedia("(hover: none)").matches;
+    const touchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
 
     timelineCards.forEach((card) => {
       card.addEventListener("click", () => {
