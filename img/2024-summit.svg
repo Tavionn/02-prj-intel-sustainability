@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" role="img">
+  <rect width="500" height="200" fill="#e8f4f8"/>
+  <rect x="43" y="35" width="414" height="112" rx="4" fill="#ffffff" stroke="#08243d" stroke-width="4"/>
+  <rect x="63" y="53" width="174" height="72" fill="#001e3c"/>
+  <path d="M82 105l31-28 23 18 32-33 41 43" fill="none" stroke="#00c7fd" stroke-width="7"/>
+  <g fill="#0071c5"><circle cx="286" cy="76" r="14"/><circle cx="350" cy="76" r="14"/><circle cx="414" cy="76" r="14"/></g>
+  <g fill="#08243d"><path d="M274 94h24l10 32h-44z"/><path d="M338 94h24l10 32h-44z"/><path d="M402 94h24l10 32h-44z"/></g>
+  <text x="78" y="45" fill="#ffffff" font-family="Arial,sans-serif" font-size="13" font-weight="700">SUSTAINABILITY SUMMIT</text>
+  <path d="M20 169h460" stroke="#c4d600" stroke-width="8"/>
+  <text x="390" y="190" fill="#08243d" font-family="Arial,sans-serif" font-size="17" font-weight="700">2024</text>
+</svg>
