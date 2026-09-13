@@ -640,6 +640,15 @@ header p {
 	}
 }
 
+@media (max-width: 600px) {
+	.timeline-card:not(.is-locked) p {
+		opacity: 0 !important;
+		visibility: hidden !important;
+		transform: translateY(100%) !important;
+		transition: none;
+	}
+}
+
 body .timeline-card.is-locked p {
 	opacity: 1;
 	visibility: visible;
