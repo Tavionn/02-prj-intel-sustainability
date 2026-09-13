@@ -160,8 +160,12 @@ header::after {
 .hero-content {
 	position: relative;
 	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: min(100%, 1100px);
 	margin: 0 auto;
+	text-align: center;
 }
 
 header img {
@@ -183,14 +187,25 @@ header img {
 h1 {
 	width: 100%;
 	max-width: 1000px;
+	min-width: 0;
 	margin: 0 auto 20px;
+	text-align: center;
 	font-family: var(--display-font);
-	font-size: clamp(2.4rem, 7vw, 5.7rem);
+	font-size: clamp(2.4rem, 6vw, 5.7rem);
 	line-height: 0.98;
 	text-transform: uppercase;
 	letter-spacing: 0;
 	color: var(--white);
 	text-shadow: none;
+}
+
+h1 span {
+	display: block;
+	white-space: nowrap;
+}
+
+h1 span + span {
+	margin-top: 0.08em;
 }
 
 @keyframes system-boot {
@@ -403,7 +418,7 @@ header p {
 	}
 
 	h1 {
-		font-size: clamp(3.1rem, 8vw, 4.8rem);
+		font-size: clamp(2.4rem, 5vw, 4.8rem);
 	}
 
 	.timeline-card {
@@ -452,26 +467,33 @@ header p {
 		padding: 56px 20px 72px;
 	}
 
+	.hero-content {
+		flex-direction: column;
+		gap: 24px;
+	}
+
 	header img {
 		width: 84px;
-		margin-bottom: 18px;
+		margin-bottom: 0;
 	}
 
 	.hero-kicker {
 		max-width: 260px;
-		margin-bottom: 16px;
+		margin: 0;
 		font-size: 0.66rem;
 		line-height: 1.5;
 	}
 
 	h1 {
 		max-width: 360px;
-		font-size: clamp(1.75rem, 9vw, 3rem);
+		margin: 0;
+		font-size: clamp(1.75rem, 7vw, 3rem);
 		line-height: 1.02;
 	}
 
 	header p {
 		max-width: 340px;
+		margin: 0;
 		font-size: 0.92rem;
 		line-height: 1.55;
 	}
@@ -484,8 +506,11 @@ header p {
 	}
 
 	.timeline {
+		flex-direction: row;
 		gap: 16px;
 		padding: 48px 20px 32px;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
 		scroll-padding: 20px;
 	}
 
@@ -496,9 +521,10 @@ header p {
 	}
 
 	.timeline-card {
-		flex-basis: min(338px, calc(100vw - 52px));
+		flex: 0 0 100%;
 		min-height: 0;
 		padding: 22px;
+		scroll-snap-align: start;
 	}
 
 	.timeline-card h2 {
