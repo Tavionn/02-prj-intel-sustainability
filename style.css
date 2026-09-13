@@ -357,9 +357,9 @@ header p {
 .timeline-card:hover p,
 .timeline-card:focus-within p,
 .timeline-card.is-locked p {
-	opacity: 1;
-	visibility: visible;
-	transform: translateY(0);
+	opacity: 1 !important;
+	visibility: visible !important;
+	transform: translateY(0) !important;
 }
 
 .timeline-hint {
@@ -651,6 +651,13 @@ header p {
 	.timeline-card:nth-child(3n):not(.is-locked):focus-within {
 		box-shadow: 8px 8px 0 var(--intel-blue);
 	}
+}
+
+body .timeline-card.is-locked p {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	transition: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
