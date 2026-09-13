@@ -198,11 +198,13 @@
     const lockSwitch = document.querySelector("#lock-details");
     const timeline = document.querySelector(".timeline");
     const timelineCards = document.querySelectorAll(".timeline-card");
+    let ignoreNextClick = false;
 
     timeline.addEventListener("pointerup", (event) => {
       const card = event.target.closest(".timeline-card");
 
       if (card && event.pointerType !== "mouse") {
+        ignoreNextClick = true;
         card.classList.toggle("is-locked");
       }
     });
@@ -210,7 +212,16 @@
     timeline.addEventListener("click", (event) => {
       const card = event.target.closest(".timeline-card");
 
-      if (card && event.detail === 0) {
+      if (!card) {
+        return;
+      }
+
+      if (ignoreNextClick) {
+        ignoreNextClick = false;
+        return;
+      }
+
+      if (event.detail > 0 || event.detail === 0) {
         card.classList.toggle("is-locked");
       }
     });
